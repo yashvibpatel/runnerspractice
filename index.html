@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife in the Forest - Home</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #4CAF50, #2E8B57);
+            color: white;
+            text-align: center;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FFD700;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px 20px;
+            font-size: 2em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .status-bar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .status-bar p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .progress {
+            width: 200px;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 75%; /* Example progress */
+            transition: width 0.3s;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#conservation">Conservation</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header id="home">
+        <h1>Discover Wildlife in the Forest</h1>
+        <p>Explore the wonders of forest ecosystems and the amazing creatures that call them home.</p>
+    </header>
+    
+    <div class="container">
+        <section class="section" id="about">
+            <h2>About Forest Wildlife</h2>
+            <p>Forests are teeming with diverse wildlife, from majestic deer to elusive birds. These habitats support biodiversity and play a crucial role in our planet's health. Learn more about conservation efforts to protect these vital ecosystems.</p>
+        </section>
+        
+        <section class="section" id="gallery">
+            <h2>Featured Creatures Gallery</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Deer in Forest">
+                <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Owl in Trees">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Fox in Woods">
+                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Bear in Habitat">
+                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Rabbit in Burrow">
+                <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Eagle in Sky">
+                <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Wolf Pack">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Butterfly on Leaf">
+            </div>
+            <p>Hover over the images to see them zoom and glow! These are real high-quality images of forest wildlife from Unsplash. All images are free to use under their license.</p>
+        </section>
+        
+        <section class="section" id="conservation">
+            <h2>Conservation Tips</h2>
+            <ul style="text-align: left; display: inline-block;">
+                <li>Support sustainable forestry practices.</li>
+                <li>Reduce deforestation by choosing eco-friendly products.</li>
+                <li>Participate in wildlife monitoring programs.</li>
+                <li>Educate others about the importance of biodiversity.</li>
+                <li>Volunteer for local conservation efforts.</li>
+            </ul>
+        </section>
+        
+        <section class="section" id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to get involved? Reach out to us at <a href="mailto:info@wildlifeforest.com" style="color: #FFD700;">info@wildlifeforest.com</a>.</p>
+        </section>
+    </div>
+    
+    <div class="status-bar">
+        <p>Page Load Progress:</p>
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+        <p>© 2023 Wildlife Forest</p>
+    </div>
+    
+    <footer>
+        <p>Thank you for visiting our homepage dedicated to forest wildlife. Explore, learn, and help protect our planet's treasures!</p>
+    </footer>
+    
+    <script>
+        // Simple script to simulate progress bar on page load
+        window.addEventListener('load', function() {
+            const progressBar = document.querySelector('.progress-bar');
+            progressBar.style.width = '100%';
+        });
+    </script>
+</body>
+</html>

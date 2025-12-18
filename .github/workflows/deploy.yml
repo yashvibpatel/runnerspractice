@@ -1,0 +1,30 @@
+name: Deploy to IIS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      # Step 1 — Checkout the latest code from your main branch
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2 — Deploy to wwwroot
+      - name: Deploy to wwwroot
+        run: |
+          $target = "C:\inetpub\wwwroot"
+
+          # Remove all existing files (optional but recommended for clean deploy)
+          if (Test-Path $target) {
+            Get-ChildItem -Path $target -Recurse -Force | Remove-Item -Force -Recurse
+          } else {
+            New-Item -ItemType Directory -Path $target | Out-Null
+          }
+
+          # Copy all files from the repo to wwwroot
+          Copy-Item -Path "$env:GITHUB_WORKSPACE\*" -Destination $target -Recurse -Force
